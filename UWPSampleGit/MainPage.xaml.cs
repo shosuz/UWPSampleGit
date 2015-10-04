@@ -26,5 +26,18 @@ namespace UWPSampleGit
         {
             this.InitializeComponent();
         }
+
+        // Application Insight に情報を送信
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = "送信完了！";
+        }
+
+        // 
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            System.Uri manifest = new System.Uri(txtInputURL.Text);
+            mePlayer.Source = manifest;
+        }
     }
 }

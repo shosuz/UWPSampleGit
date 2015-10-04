@@ -7,7 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="LemonChiffon">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="442" FontSize="48">
+        	<Run Text="VS+AppInsight"/>
+        	<Run Text=" (Git)"/>
+        </TextBlock>
+        <Button x:Name="button" Content="テスト" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" FontSize="48" Click="button_Click"/>
+        <Button x:Name="btnPlay" Click="btnPlay_Click" Content="Play" Margin="10,79,0,05" FontSize="48" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <TextBox x:Name="txtInputURL" Text="http://amssamples.streaming.mediaservices.windows.net/49b57c87-f5f3-48b3-ba22-c55cfdffa9cb/Sintel.ism/manifest(format=m3u8-aapl)" Margin="10,231,55,697"/>
+
+        <MediaElement  Name="mePlayer" AudioCategory="Movie" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="640" Width="1400"
+                      AreTransportControlsEnabled="True" Margin="10,289,30,31"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="801,102,0,0" TextWrapping="Wrap" Text="URL を書き換えます" VerticalAlignment="Top" FontSize="32"/>
 
     </Grid>
 </Page>
